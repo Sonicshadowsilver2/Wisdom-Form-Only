@@ -66,7 +66,7 @@ function _OnFrame()
 			if ReadByte(Now+0x08) == 0x9D or ReadByte(Now+0x08) == 0x78 or ReadByte(Now+0x08) == 0x7D then
 				WriteShort(UCM+0x009C, 0x005A) --Roxas -> Roxas
 			else
-				WriteShort(UCM+0x009C, 0x0056) --Roxas -> Valor Form
+				WriteShort(UCM+0x009C, 0x0056) --Roxas -> Wisdom Form
 			end
 			if ReadByte(Now+0x01) == 0x1C and ReadByte(Now+0x08) == 0x01 and ReadByte(Save+0x1CE5) == 0x05 then
 				WriteByte(Save+0x1CE5, 0x01)
