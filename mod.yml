@@ -1,0 +1,39 @@
+title: Wisdom Form Only
+description: Changes all instances of Sora and Roxas into Wisdom Form. This is not compatible with GoA ROM Edition.
+assets:
+#Lua Script
+- name: scripts/WisdomFormOnly.lua
+  method: copy
+  source:
+  - name: WisdomFormOnly.lua
+#ARD Editing
+- method: binarc
+  name: ard/dc05.ard #Hall of the Cornerstone Cutscenes
+  multi:
+  - name: ard/jp/dc05.ard
+  - name: ard/us/dc05.ard
+  - name: ard/fr/dc05.ard
+  - name: ard/gr/dc05.ard
+  - name: ard/it/dc05.ard
+  - name: ard/sp/dc05.ard
+  source:
+  - method: areadatascript
+    name: evt
+    source:
+    - name: ard/dc05evt.yml
+    type: AreaDataScript
+- method: binarc
+  name: ard/tt07.ard #Market Street: Tram Common Cutscenes
+  multi:
+  - name: ard/jp/tt07.ard
+  - name: ard/us/tt07.ard
+  - name: ard/fr/tt07.ard
+  - name: ard/gr/tt07.ard
+  - name: ard/it/tt07.ard
+  - name: ard/sp/tt07.ard
+  source:
+  - method: areadatascript
+    name: evt
+    source:
+    - name: ard/tt07evt.yml
+    type: AreaDataScript
