@@ -59,11 +59,11 @@ local EntriesOBJ =
 local EntriesFAC = 
 {
     "p_ex100",
-    "p_ex100_btlf",
-    "p_ex100_magf",
-    "p_ex100_kh1f",
-    "p_ex100_trif",
-    "p_ex100_ultf",
+    "p_ex100",
+    "p_ex100",
+    "p_ex100",
+    "p_ex100",
+    "p_ex100",
     "p_ex020",
     "p_ex030",
     "p_ex120",
