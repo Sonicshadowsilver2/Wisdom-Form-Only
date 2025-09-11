@@ -6,7 +6,7 @@ assets:
   method: copy
   source:
   - name: WisdomFormOnly.lua
-  - name: scripts/shopfaceReconstruct.lua
+- name: scripts/shopfaceReconstruct.lua
   method: copy
   source:
   - name: shopfaceReconstruct.lua
