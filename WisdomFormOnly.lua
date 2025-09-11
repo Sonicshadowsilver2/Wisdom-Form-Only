@@ -12,6 +12,7 @@ function GetVersion() --Define anchor addresses
 			print('EGS v1.0.0.9 Detected - WisdomFormOnly')
 			Now  = 0x0716DF8
 			Save = 0x09A92F0
+			Drive = 0x2A23188
 			UCM = 0x2A71998
 			Obj0 = 0x2A24A70
 			canExecute = true
@@ -20,6 +21,7 @@ function GetVersion() --Define anchor addresses
 			print('EGS v1.0.0.10 Detected - WisdomFormOnly')
 			Now  = 0x0716DF8
 			Save = 0x09A9330
+			Drive = 0x2A231C8
 			UCM = 0x2A719D8
 			Obj0 = 0x2A24AB0
 			canExecute = true
@@ -28,6 +30,7 @@ function GetVersion() --Define anchor addresses
 			print('Steam GL v1.0.0.1 Detected - WisdomFormOnly')
 			Now  = 0x0717008
 			Save = 0x09A9830
+			Drive = 0x2A236C8
 			UCM = 0x2A71ED8
 			Obj0 = 0x2A24FB0
 			canExecute = true
@@ -36,6 +39,7 @@ function GetVersion() --Define anchor addresses
 			print('Steam JP v1.0.0.1 Detected - WisdomFormOnly')
 			Now  = 0x0716008
 			Save = 0x09A8830
+			Drive = 0x2A226C8
 			UCM = 0x2A70ED8
 			Obj0 = 0x2A23FB0
 			canExecute = true
@@ -44,6 +48,7 @@ function GetVersion() --Define anchor addresses
 			print('Steam v1.0.0.2 Detected - WisdomFormOnly')
 			Now  = 0x0717008
 			Save = 0x09A98B0
+			Drive = 0x2A23748
 			UCM = 0x2A71F58
 			Obj0 = 0x2A25030
 			canExecute = true
@@ -77,6 +82,16 @@ function _OnFrame()
 				WriteShort(UCM+0x06E8, 0x028A) --Wisdom Form -> Lion Sora
 			else
 				WriteShort(UCM+0x06E8, 0x0056) --Lion Sora -> Wisdom Form
+			end
+		end
+		if ReadShort(Now+0x00) == 0x0E12 then --Luxord
+			if ReadByte(Now+0x08) == 0x3A or ReadByte(Now+0x08) == 0x65 then
+				if ReadByte(Save+0x3524) == 0x00 then
+					WriteByte(Save+0x3524, 0x02) --Remain in Wisdom Form
+				end
+				if ReadInt(Drive+0x6A4) < 0x44160001 and ReadInt(Drive+0x06A8) > 0x45000000 then
+					WriteInt(Drive+0x6A4, 0x45160000)
+				end
 			end
 		end
 		if ReadByte(UCM+0x00) == 0x54 then
