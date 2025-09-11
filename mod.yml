@@ -6,6 +6,10 @@ assets:
   method: copy
   source:
   - name: WisdomFormOnly.lua
+  - name: scripts/shopfaceReconstruct.lua
+  method: copy
+  source:
+  - name: shopfaceReconstruct.lua
 #ARD Editing
 - method: binarc
   name: ard/dc05.ard #Hall of the Cornerstone Cutscenes
