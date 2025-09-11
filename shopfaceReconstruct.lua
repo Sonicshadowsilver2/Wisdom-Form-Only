@@ -3,6 +3,9 @@ local EntriesOBJ =
     0x0054, 
     0x0055, 
     0x0056, 
+    0x0057, 
+    0x0058, 
+    0x095D, 
     0x005C, 
     0x005D, 
     0x06C1,
@@ -56,8 +59,11 @@ local EntriesOBJ =
 local EntriesFAC = 
 {
     "p_ex100",
-    "p_ex100_BTLF",
-    "p_ex100_MAGF",
+    "p_ex100_btlf",
+    "p_ex100_magf",
+    "p_ex100_kh1f",
+    "p_ex100_trif",
+    "p_ex100_ultf",
     "p_ex020",
     "p_ex030",
     "p_ex120",
