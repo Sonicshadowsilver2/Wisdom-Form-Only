@@ -80,21 +80,6 @@ assets:
       language: jp
 #ARD Editing
 - method: binarc
-  name: ard/eh03.ard #Memory's Skyscraper Cutscenes
-  multi:
-  - name: ard/jp/eh03.ard
-  - name: ard/us/eh03.ard
-  - name: ard/fr/eh03.ard
-  - name: ard/gr/eh03.ard
-  - name: ard/it/eh03.ard
-  - name: ard/sp/eh03.ard
-  source:
-  - method: areadatascript
-    name: evt
-    source:
-    - name: ard/eh03evt.yml
-    type: AreaDataScript
-- method: binarc
   name: ard/dc05.ard #Hall of the Cornerstone Cutscenes
   multi:
   - name: ard/jp/dc05.ard
@@ -108,6 +93,21 @@ assets:
     name: evt
     source:
     - name: ard/dc05evt.yml
+    type: AreaDataScript
+- method: binarc
+  name: ard/eh03.ard #Memory's Skyscraper Cutscenes
+  multi:
+  - name: ard/jp/eh03.ard
+  - name: ard/us/eh03.ard
+  - name: ard/fr/eh03.ard
+  - name: ard/gr/eh03.ard
+  - name: ard/it/eh03.ard
+  - name: ard/sp/eh03.ard
+  source:
+  - method: areadatascript
+    name: evt
+    source:
+    - name: ard/eh03evt.yml
     type: AreaDataScript
 - method: binarc
   name: ard/tt07.ard #Market Street: Tram Common Cutscenes
