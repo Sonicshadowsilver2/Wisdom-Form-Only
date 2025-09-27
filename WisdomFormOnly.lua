@@ -89,8 +89,8 @@ function _OnFrame()
 				if ReadByte(Save+0x3524) == 0x00 then
 					WriteByte(Save+0x3524, 0x02) --Remain in Wisdom Form
 				end
-				if ReadInt(Drive+0x6A4) < 0x44160001 and ReadInt(Drive+0x06A8) > 0x45000000 then
-					WriteInt(Drive+0x6A4, 0x45160000)
+				if ReadInt(Drive+0x04) < 0x44160002 and ReadInt(Drive+0x08) > 0x44960000 then
+					WriteInt(Drive+0x04, 0x45160000)
 				end
 			end
 		end
